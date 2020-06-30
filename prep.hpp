@@ -3,40 +3,38 @@
 #include <string>
 using namespace std;
 /*!
-	\brief  Класс, выполняющей роль bazi preparatov
+	\brief  Класс, выполняющей роль базы препаратов
 */
 class prep{
-    protected:
-        int kod; ///< kod prepa 
     public:
-        string name;///< Название prepa
-        int kolvo; ///< Количество prepa
-        int tsena; ///< tsena prepa
-	//int kod; ///< kod prepa
+        string name;///< Название препарата
+        int kolvo; ///< Количество препарата
+        int tsena; ///< Цена препарата
+	int kod; ///< Код препарата
 
         /*!
-            \brief Функция присвоения koda
-            \param n kod
+            \brief Функция присвоения кода
+            \param n Код
         */
         void setKod(int n);
         /*!
-            \brief Функция получения koda
-            \return kod
+            \brief Функция получения Кода
+            \return Код
         */
         int getKod();
         /*!
-            \brief Функция получения kolva
-            \return kolvo
+            \brief Функция получения количества
+            \return Количество
         */
         int getKolvo();
         /*!
-            \brief Функция получения tseni
-            \return tsena
+            \brief Функция получения цены
+            \return Цена
         */
         int getTsena();
         /*!
-            \brief Функция получения imeni
-            \return name
+            \brief Функция получения имени
+            \return Имя
         */
         string getName();
         /*!
@@ -51,14 +49,14 @@ class prep{
         /*!
             \brief Оператор перегрузки вывода
             \param stream Поток данных
-            \param ms prep
+            \param ms Препараты
          */
         friend ostream& operator<< (ostream& stream, prep &ms);
 
         /*!
             \brief Оператор перегрузки ввода
             \param stream Поток данных
-            \param ms prep
+            \param ms Препараты
          */
         friend istream& operator>> (istream& stream, prep &ms);
         

@@ -9,78 +9,78 @@ using namespace std;
 */
 class ui{
 private:
-	string filename1; ///< Имя файла базы prep
-	string filename2; ///< Имя файла kassi
+	string filename1; ///< Имя файла базы препаратов
+	string filename2; ///< Имя файла кассы
 
 	/*!
-		\brief Функция prisv имени prep
-		\param name1 Название файла с базой prep
-		\param kod kod prep
-		\return ustanovka koda
+		\brief Функция присвоения кода препарату
+		\param name1 Название файла с базой препаратов
+		\param kod Код препарата
+		\return Код
 	*/
 	void set_kod( int kod);
 
 	/*!
-		\brief Функция получения имени prep
-		\param name1 Название файла с базой prep
-		\param kod kod prep
+		\brief Функция получения имени препарата
+		\param name1 Название файла с базой препаратов
+		\param kod Код препарата
 		\return Имя
 	*/
 	string get_name(string name1, int kod);
 
 	/*!
-		\brief Функция получения koda prep
-		\param name1 Название файла с базой prep
-		\param name2 Название prep
-		\return kod
+		\brief Функция получения кода препарата
+		\param name1 Название файла с базой препаратов
+		\param name2 Название препарата
+		\return Код
 	*/
 	int get_kod(string name1,string name2);
 
 	/*!
-		\brief Функция получения количества prep
-		\param name1 Название файла с базой prep
-		\param name2 Название prep
-		\return Количество prepa
+		\brief Функция получения количества препарата
+		\param name1 Название файла с базой препаратов
+		\param name2 Название препарата
+		\return Количество 
 	*/
 	int get_kolvo(string name1, int kod);
 
 	/*!
-		\brief Функция получения tseni prep
-		\param name1 Название файла с базой prep
-		\param kod kod фирмы
-		\return tsena
+		\brief Функция получения цены препарата
+		\param name1 Название файла с базой препаратов
+		\param kod Код препарата
+		\return Цена
 	*/
 	int get_tsena(string name1,int kod);
   
 	/*!
-		\brief Функция prodazhi prep
-		\param name1 Название файла с базой prep
-		\param name2 Название файла с kassoi
+		\brief Функция продажи препарата
+		\param name1 Название файла с базой препаратов
+		\param name2 Название файла с кассой
 	*/
 	void del_prep(string name1,string name2);
 
 	/*!
-		\brief Функция dobavl prep
-		\param name1 Название файла с базой prep
+		\brief Функция добавления препарата
+		\param name1 Название файла с базой препаратов
 	*/
 	void add_prep(string name1);
 
 	/*!
-		\brief Функция pokaza vsego
-		\param name1 Название файла с базой prep
+		\brief Функция демонстрации информации о препаратах
+		\param name1 Название файла с базой препаратов
 	*/
 	void print(string name1);
 
 	/*!
-		\brief Функция pokaza summi v kasse
-		\param name2 Название файла с kassoi
-		\param summa summa v kasse
+		\brief Функция демонстрации суммы в кассе
+		\param name2 Название файла с кассой
+		\param summa Сумма в кассе
 	*/
 	void print1(string name2, int summa);
 
 	/*!
-		\brief Функция ochistki kassi
-		\param name2 Название файла с kassoi
+		\brief Функция очистки кассы
+		\param name2 Название файла с кассой
 	*/
 	void del1(string name2);
 
@@ -104,39 +104,39 @@ public:
 	void uiMenu();
 
 	/*!
-		\brief Функция prodazhi
+		\brief Функция меню продажи
 	*/
 	void uiDel();
 	/*!
-		\brief Функция prodazhi
+		\brief Функция продажи
 	*/
 	void del();
 
 	/*!
-		\brief Функция prinyatiya prep
+		\brief Функция меню добавления препарата
 	*/
 	void uiAdd();
 	/*!
-		\brief Функция prinyatiya prep
+		\brief Функция добавления препарата
 	*/
 	void add();
 
 	/*!
-		\brief Функция ochist kassi
+		\brief Функция меню очистки кассы
 	*/
 	void uiDel1();
 	/*!
-		\brief Функция ochist kassi
+		\brief Функция очистки кассы
 	*/
 	void del1();
 
 	/*!
-		\brief Функция pokaza vseh preparatov
+		\brief Функция демонстрации информации о препаратах
 	*/
 	void print();
 
 	/*!
-		\brief Функция pokaza summi v kasse
+		\brief Функция демонстрации суммы в кассе
 	*/
 	void print1();
 	

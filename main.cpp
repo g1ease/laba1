@@ -10,7 +10,6 @@ int main(int argc, char *argv[]){
         cout<<"Не заданы имена файлов"<<endl;
         return 0;
     }
-    ui b(argv[1],argv[2]
-);
+    ui b(argv[1],argv[2]);
     b.mainLoop();
 }

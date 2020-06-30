@@ -39,8 +39,6 @@ int prep::getTsena(){
     return tsena;
 }
 
-
-
 string ui:: get_name(string name1, int kod){
     ifstream f(name1);
     int n;
@@ -116,11 +114,11 @@ void ui:: del_prep(string name1,string name2){
         f>>r[i];
     }
     string s;
-    cout<<"Введите название prep"<<endl;
+    cout<<"Введите название препарата"<<endl;
     cin>>s;
     int j=get_kod(name1,s);
     while (j==-1){
-      cout<<"Такого prep нет, введите заново"<<endl;
+      cout<<"Такого препарата нет, введите заново"<<endl;
       cin>>s;
       j=get_kod(name1,s);
     }
@@ -165,14 +163,14 @@ void ui:: add_prep(string name1){
         f>>r[i];
     }
     string s;
-    cout<<"Введите название prep"<<endl;
+    cout<<"Введите название препарата"<<endl;
     cin>>s;
     int j=get_kod(name1,s);
     while (j==-1){
-	cout<<"Введите количество prep"<<endl;
+	cout<<"Введите количество препарата"<<endl;
 	cin>>k;
 	r[n+1].kolvo=k;
-	cout<<"Введите tsenu prep"<<endl;
+	cout<<"Введите цену препарата"<<endl;
 	cin>>t;
 	r[n+1].tsena=t;
         	
@@ -195,7 +193,7 @@ void ui:: add_prep(string name1){
         f1<<r[i];   
     }
     f1<<r[n+1];
-    cout << "Препарат dobavlen."<<endl; 
+    cout << "Препарат добавлен."<<endl; 
     f1.close();
     delete [] r;
 } 
@@ -204,11 +202,11 @@ void ui:: print(string name1){
     ifstream f(name1);
     int n;
     prep a;
-    cout<<"preparati:"<<endl;
+    cout<<"Препараты:"<<endl;
     f>>n;
     for (int i=0;i<n;i++){
         f>>a;
-        cout<<" Kod: "<<a.kod<<" Название: "<<a.name<<" Kolvo: "<<a.kolvo<<" Tsena: "<<a.tsena<<endl;
+        cout<<" Код: "<<a.kod<<" Название: "<<a.name<<" Количество: "<<a.kolvo<<" Цена: "<<a.tsena<<endl;
     }
     f.close();
 }
@@ -217,7 +215,7 @@ void ui:: print1(string name2, int summa) {
     ifstream f(name2);
     int s;
     f>>s;
-    cout << "В кассе: " << s << " рублей."<<endl;
+    cout << "В кассе: " << s << " ₽."<<endl;
     f.close();
 
 }

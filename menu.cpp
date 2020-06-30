@@ -5,12 +5,11 @@
 #include <set>
 using namespace std;
 
-
-
 ui::ui(string filename1, string filename2){
 	this->filename1 = filename1;
 	this->filename2 = filename2;
 }
+
 ui::~ui(){
 
 }
@@ -19,8 +18,7 @@ void ui::mainLoop(){
 	int symbol = -100;
 	unsigned int summa = 0;
 	uiMenu();
-
-	while(symbol != 9){
+	while(symbol != 7){
 		cout << "Введите команду: ";
 		cin >> symbol;
 		switch(symbol){
@@ -67,19 +65,19 @@ void ui::uiMenu(){
 
 void ui::uiDel(){
 	system("clear");
-	cout << "1. prodat' preparat. " << endl;
+	cout << "1. Продать препарат. " << endl;
 	cout << "0. Выход."  << endl;
 }
 
 void ui::uiAdd(){
 	system("clear");
-	cout << "1. prinyat' preparat. " << endl;
+	cout << "1. Добавить препарат. " << endl;
 	cout << "0. Выход."  << endl;
 }
 
 void ui::uiDel1(){
 	system("clear");
-	cout << "1. ochist kassu. " << endl;
+	cout << "1. Очистить кассу. " << endl;
 	cout << "0. Выход."  << endl;
 }
 
