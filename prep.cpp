@@ -157,8 +157,9 @@ void ui:: add_prep(string name1){
 
     ifstream f(name1);
     int n,g,m,k,t;
+    int h=0; // счетчик добавления нового препарата
     f>>n;
-    prep *r=new prep[n];
+    prep *r=new prep[n+1];
     for( int i=0;i<n;i++){
         f>>r[i];
     }
@@ -169,13 +170,14 @@ void ui:: add_prep(string name1){
     while (j==-1){
 	cout<<"Введите количество препарата"<<endl;
 	cin>>k;
-	r[n+1].kolvo=k;
+	r[n].kolvo=k;
 	cout<<"Введите цену препарата"<<endl;
 	cin>>t;
-	r[n+1].tsena=t;
+	r[n].tsena=t;
         	
-	r[n+1].kod=n+1;	
-	r[n+1].name=s;
+	r[n].kod=n+1;	
+	r[n].name=s;
+	h=1;
             break;
     }
 
@@ -188,11 +190,18 @@ void ui:: add_prep(string name1){
     }
     f.close();
     ofstream f1(name1, ios_base::trunc); 
+    if(h==1){
     f1<<n+1<<endl;
+    }
+    if(h==0){
+    f1<<n<<endl;
+    }
     for( int i=0;i<n;i++){
         f1<<r[i];   
     }
-    f1<<r[n+1];
+    if(h==1){
+    f1<<r[n];
+    }
     cout << "Препарат добавлен."<<endl; 
     f1.close();
     delete [] r;
