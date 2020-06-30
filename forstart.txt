@@ -1,0 +1,1 @@
+./aptest1 basa.txt kassa.txt
