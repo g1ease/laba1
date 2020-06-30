@@ -1,5 +1,3 @@
-/*#include "mean.hpp"
-#include "measure.hpp"*/
 #include "prep.hpp"
 #include "menu.hpp"
 #include <iostream>
