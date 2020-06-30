@@ -1,0 +1,7 @@
+6
+1 Glitsin 2 10
+2 Noshpa 1 4
+3 Yod 1 12
+4 Gematogen 1 11
+5 Askorbinka 1 10
+6 Bint 1 5
